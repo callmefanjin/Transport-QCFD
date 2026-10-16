@@ -1,0 +1,32 @@
+{
+  "source": {
+    "start": 0,
+    "end": 2,
+    "deltax": 0.1,
+    "u": 10,
+    "D": 0.5,
+    "alpha": -1,
+    "kappa": 0.1,
+    "T": 1,
+    "K": 2,
+    "r": 8,
+    "Lp": 16,
+    "Np": 16
+  },
+  "run": {
+    "start": -15.0,
+    "end": 15.0,
+    "deltax": 1.0,
+    "u": 10,
+    "D": 0.5,
+    "alpha": -1,
+    "kappa": 0.1,
+    "T": 1,
+    "K": 2,
+    "r": 8,
+    "Lp": 16,
+    "Np": 64,
+    "initial_condition": "exp(-(x-mu)**2)",
+    "mu": -10.0
+  }
+}

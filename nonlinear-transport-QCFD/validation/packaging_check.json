@@ -1,0 +1,9 @@
+{
+  "relative_markdown_links_valid": true,
+  "five_source_modules_byte_identical": true,
+  "relocated_plot_pixels_identical": true,
+  "relocated_small_case_numpy_passed": true,
+  "relocated_small_case_compiled_passed": true,
+  "small_case_backend_difference": 0.0,
+  "full_production_cases_rerun": false
+}

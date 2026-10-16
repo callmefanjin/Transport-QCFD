@@ -1,0 +1,544 @@
+{
+  "parameters": {
+    "start": -15.0,
+    "end": 15.0,
+    "deltax": 0.5,
+    "u": 10,
+    "D": 0.5,
+    "alpha": -1,
+    "kappa": 0.1,
+    "T": 1.0,
+    "K": 2,
+    "r": 32,
+    "Lp": 16,
+    "Np": 64,
+    "initial_condition": "exp(-(x-mu)**2)",
+    "mu": -10.0
+  },
+  "Nx": 60,
+  "M": 3660,
+  "padded_dimension": 4096,
+  "n_qubits": 12,
+  "deltap": 0.5,
+  "H1_min_eigenvalue": -18.000002451430504,
+  "H1_max_eigenvalue": -0.9993938554245738,
+  "errors": {
+    "phit_vs_finite_difference": 0.06070281828697312
+  },
+  "max_abs_imaginary_phi": 0.001171204099929545,
+  "max_padded_probability": 0.006323517379736707,
+  "max_full_state_norm_error": 7.024623105422734e-10,
+  "raw_gate_counts": [
+    11049952,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472,
+    22165472
+  ],
+  "expanded_gate_counts": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "runtime_seconds": 1718.9767285999842,
+  "versions": {
+    "python": "3.12.0",
+    "numpy": "2.2.3",
+    "scipy": "1.17.1",
+    "qiskit": "2.5.2",
+    "matplotlib": "3.10.9"
+  },
+  "source_status": {
+    "copied_files_match_snapshot": {
+      "main.py": true,
+      "transport.py": true,
+      "carleman.py": true,
+      "evolution.py": true,
+      "schrodingerisation.py": true
+    },
+    "original_files_match_snapshot": {
+      "main.py": true,
+      "transport.py": true,
+      "carleman.py": true,
+      "evolution.py": true,
+      "schrodingerisation.py": true
+    }
+  },
+  "method": "Classical direct Pauli action with the same decomposition tolerance, term order, angles and repetitions as the copied Trotter circuit; no hardware run. Compiled amplitude-pair evaluation in three independent workers; negative frequencies use conjugates of freshly computed r32 states.",
+  "limitations": "Single coarse-grid run, not a convergence study. p=0 recovery is approximate on the finite auxiliary grid. Plot shows real components; errors use full complex values. Padding leakage is recorded, not renormalized away.",
+  "mode_evaluation": {
+    "workers": 3,
+    "independent_modes": 33,
+    "usage": [
+      {
+        "mode": 0,
+        "eta": 0.0,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 1,
+        "eta": 0.19634954084936207,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 2,
+        "eta": 0.39269908169872414,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 3,
+        "eta": 0.5890486225480862,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 4,
+        "eta": 0.7853981633974483,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 5,
+        "eta": 0.9817477042468103,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 6,
+        "eta": 1.1780972450961724,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 7,
+        "eta": 1.3744467859455345,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 8,
+        "eta": 1.5707963267948966,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 9,
+        "eta": 1.7671458676442586,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 10,
+        "eta": 1.9634954084936207,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 11,
+        "eta": 2.1598449493429825,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 12,
+        "eta": 2.356194490192345,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 13,
+        "eta": 2.552544031041707,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 14,
+        "eta": 2.748893571891069,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 15,
+        "eta": 2.945243112740431,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 17,
+        "eta": 3.3379421944391554,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 16,
+        "eta": 3.141592653589793,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 18,
+        "eta": 3.5342917352885173,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 19,
+        "eta": 3.730641276137879,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 20,
+        "eta": 3.9269908169872414,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 21,
+        "eta": 4.123340357836604,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 22,
+        "eta": 4.319689898685965,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 23,
+        "eta": 4.516039439535327,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 24,
+        "eta": 4.71238898038469,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 26,
+        "eta": 5.105088062083414,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 25,
+        "eta": 4.908738521234052,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 27,
+        "eta": 5.301437602932776,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 28,
+        "eta": 5.497787143782138,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 29,
+        "eta": 5.6941366846315,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 30,
+        "eta": 5.890486225480862,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 31,
+        "eta": 6.086835766330224,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 32,
+        "eta": -6.283185307179586,
+        "kind": "new r32 evolution"
+      },
+      {
+        "mode": 33,
+        "eta": -6.086835766330224,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 34,
+        "eta": -5.890486225480862,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 35,
+        "eta": -5.6941366846315,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 36,
+        "eta": -5.497787143782138,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 37,
+        "eta": -5.301437602932776,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 38,
+        "eta": -5.105088062083414,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 39,
+        "eta": -4.908738521234052,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 40,
+        "eta": -4.71238898038469,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 41,
+        "eta": -4.516039439535327,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 42,
+        "eta": -4.319689898685965,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 43,
+        "eta": -4.123340357836604,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 44,
+        "eta": -3.9269908169872414,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 45,
+        "eta": -3.730641276137879,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 46,
+        "eta": -3.5342917352885173,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 47,
+        "eta": -3.3379421944391554,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 48,
+        "eta": -3.141592653589793,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 49,
+        "eta": -2.945243112740431,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 50,
+        "eta": -2.748893571891069,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 51,
+        "eta": -2.552544031041707,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 52,
+        "eta": -2.356194490192345,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 53,
+        "eta": -2.1598449493429825,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 54,
+        "eta": -1.9634954084936207,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 55,
+        "eta": -1.7671458676442586,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 56,
+        "eta": -1.5707963267948966,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 57,
+        "eta": -1.3744467859455345,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 58,
+        "eta": -1.1780972450961724,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 59,
+        "eta": -0.9817477042468103,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 60,
+        "eta": -0.7853981633974483,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 61,
+        "eta": -0.5890486225480862,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 62,
+        "eta": -0.39269908169872414,
+        "kind": "conjugate reuse of r32 state"
+      },
+      {
+        "mode": 63,
+        "eta": -0.19634954084936207,
+        "kind": "conjugate reuse of r32 state"
+      }
+    ]
+  },
+  "compiled_validation": [
+    {
+      "dimension": 4,
+      "vs_numpy": 0.0,
+      "vs_qiskit": 8.353512671637496e-15,
+      "gates": 496
+    },
+    {
+      "dimension": 8,
+      "vs_numpy": 0.0,
+      "vs_qiskit": 1.9988214707821646e-13,
+      "gates": 2032
+    },
+    {
+      "dimension": 16,
+      "vs_numpy": 0.0,
+      "vs_qiskit": 1.299645333020019e-12,
+      "gates": 8176
+    }
+  ],
+  "complete_mode_validation": {
+    "complete_r8_mode": {
+      "mode": 1,
+      "relative_state_difference": 1.9774707361619088e-14,
+      "padding_difference": 3.2612801348363973e-16,
+      "seconds": 36.71430370002054
+    }
+  },
+  "validation_provenance": "Compiled worker validated during prior r16 run; same executable and rotation formula used here."
+}

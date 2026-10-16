@@ -1,0 +1,20 @@
+[
+  {
+    "dimension": 4,
+    "vs_numpy": 0.0,
+    "vs_qiskit": 8.353512671637496e-15,
+    "gates": 496
+  },
+  {
+    "dimension": 8,
+    "vs_numpy": 0.0,
+    "vs_qiskit": 1.9988214707821646e-13,
+    "gates": 2032
+  },
+  {
+    "dimension": 16,
+    "vs_numpy": 0.0,
+    "vs_qiskit": 1.299645333020019e-12,
+    "gates": 8176
+  }
+]
