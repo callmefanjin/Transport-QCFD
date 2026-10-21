@@ -1,13 +1,26 @@
-# Full solver results on two spatial grids
-
-We solve $\phi_t+u\phi_x=D\phi_{xx}+\alpha\phi+\kappa\phi^2$ with the periodic boundary condition and Gaussian initial condition shown in the figure. All case parameters are marked on the plots.
-
-**Finite difference** uses second-order central spatial differences and Radau time integration of the full nonlinear system ($\mathrm{rtol}=10^{-10}$, $\mathrm{atol}=10^{-12}$). **phit** uses full-tensor Carleman truncation ($K=2$), WPT and FFT, followed by a second-order symmetric Suzuki--Trotter product over Pauli terms with $r$ steps of size $T/r$. An inverse FFT recovers the field at $p=0$, and the first $N_x$ components give phit. The Pauli rotations are evaluated by equivalent classical statevector operations; these are simulator results, not quantum-hardware measurements.
-
-![Finite-difference and phit solutions on two spatial grids, with all case parameters](./figures/selected_grid_results.png)
-
-The curves show real parts; $E=\|\mathrm{phit}-\phi_{\mathrm{FD}}\|_2/\|\phi_{\mathrm{FD}}\|_2$ uses the full complex solution.
-
-The results show that the solution recovered from the truncated Carleman linear system, through WPT and Trotter evolution, can approximate the spatial distribution of the corresponding nonlinear finite-difference solution.
-
-The parameter tests also show that spatial refinement requires a corresponding increase in the Trotter step count $r$ to control the evolution error. The discrete convection and diffusion coefficients scale as $1/\Delta x$ and $1/\Delta x^2$, respectively, so keeping $T/r$ fixed can give a less accurate product-formula approximation on a finer grid. Spatial refinement should therefore be accompanied by a check of Trotter convergence.
+# Nonlinear Transport
+
+Quantum-algorithm implementation for one-dimensional nonlinear advection–diffusion–reaction:
+
+$$
+\frac{\partial\phi}{\partial t}+u\frac{\partial\phi}{\partial x}
+=D\frac{\partial^2\phi}{\partial x^2}+\alpha\phi+\kappa\phi^2.
+$$
+
+## Computational method
+
+Second-order central differences discretise space. Carleman linearisation lifts the nonlinear system; Schrödingerisation uses a warped-phase transformation and FFT to construct Hermitian evolution problems. A second-order Suzuki–Trotter product advances the Pauli terms. An inverse FFT recovers the physical field at $p=0$.
+
+The reference integrates the full nonlinear finite-difference system with Radau. Both solutions use the same spatial grid.
+
+## Gaussian transport example
+
+Periodic domain $x\in[-15,15)$ with $\phi(0,x)=e^{-(x+10)^2}$. Parameters: $u=10$, $D=0.5$, $\alpha=-1$, $\kappa=0.1$ and final time $T=1$. Carleman order $K=2$; auxiliary grid $L_p=16$, $N_p=64$.
+
+![Recovered field and nonlinear finite-difference reference](figures/selected_grid_results.png)
+
+*Real parts of the solutions. Relative $L_2$ errors, evaluated using the full complex recovered field, are 12.85% for $(N_x,r)=(30,8)$ and 6.07% for $(60,32)$.*
+
+These are classical statevector simulations of the quantum algorithm. Spatial resolution and Trotter step count change together, so this comparison does not establish spatial convergence or quantum speedup.
+
+[Run the code](RUNNING.md)

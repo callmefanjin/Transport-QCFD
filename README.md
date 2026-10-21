@@ -1,5 +1,18 @@
-### Notes on Quantum Computing and CFD
+# Transport-QCFD
 
-This repository contains my study notes and Python implementations of quantum algorithms, with a particular interest in their application to computational fluid dynamics (CFD).
+Transport-QCFD is a Python computational code for implementing quantum algorithms for transport equations in computational fluid dynamics. The current implementation solves a nonlinear one-dimensional advection–diffusion–reaction equation using Carleman linearisation, Schrödingerisation and Suzuki–Trotter evolution.
 
-The aim is to connect mathematical derivations with code, and to understand how discretization, algorithmic approximations, and parameter choices affect numerical results.
+## Nonlinear transport
+
+![Quantum-algorithm and finite-difference solutions on two spatial grids](nonlinear-transport-QCFD/figures/selected_grid_results.png)
+
+*Recovered field (`phit`) compared with a nonlinear finite-difference reference. The displayed results use classical statevector simulation.*
+
+## Core capabilities
+
+- Carleman lifting of quadratic nonlinear dynamics.
+- Warped-phase transformation and Fourier-mode Hamiltonian evolution.
+- Qiskit Pauli circuits and equivalent direct statevector evaluation.
+- Field recovery and comparison with a Radau reference solution.
+
+[Model and results](nonlinear-transport-QCFD/README.md) · [Run the code](nonlinear-transport-QCFD/RUNNING.md)
